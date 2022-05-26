@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe & Wifi</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h1>Explore Coffee Shops Around You</h1>
+<h2>Tell me where is good coffee and Wi-Fi and I will tell you more about where is best coffee and wifi</h2>
+{% block content %}
+<div class="top">
+    <form class="" action="/add" method="post">
+    <button type="submit" class="btn">Add New Cafe</button>
+  </form>
+
+</div>
+
+{% for cafe in cafes %}
+<div id="del" class="card">
+    <h3>{{cafe.name}}</h3>
+    <img class="card-img" src="{{cafe.img_url}}" />
+    <p><a href="{{cafe.map_url}}">{{cafe.location}}</a> Coffee Price:{{cafe.coffee_price}}</p>
+    <form action="/update" method="post"><button type="submit" class="btn-o btn-u">UPDATE</button><button type="button" id="" class="btn-o"> DELETE </button></form>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+<script src="static/index.js" type="text/javascript">
+</script>
+</body>
+</html>

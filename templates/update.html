@@ -1,0 +1,26 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Update{% endblock %}
+
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+
+      <h1>Update</h1>
+
+      <!-- This is where your WTForm will go -->
+      {{ wtf.quick_form(form, method="post", novalidate=True) }}
+
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
