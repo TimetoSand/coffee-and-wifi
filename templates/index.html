@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cafe & Wifi</title>
-    <link rel="stylesheet"
-      href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="static/main.css">
 </head>
 <body>
 
 <h1>Explore Coffee Shops Around You</h1>
 <h2>Tell me where is good coffee and Wi-Fi and I will tell you more about where is best coffee and wifi</h2>
 {% block content %}
-<div class="top">
+<div style="background-image: url('https://i.pinimg.com/originals/03/90/2d/03902dd9ec198f9d510c07a45b2ca234.jpg'); height:370px;
+background-position:center center;
+width:70%;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:1rem;" class="top" >
     <form class="" action="/add" method="post">
     <button type="submit" class="btn">Add New Cafe</button>
   </form>
